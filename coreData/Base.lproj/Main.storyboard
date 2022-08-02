@@ -39,17 +39,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="5tc-KW-gHa" kind="show" id="0I0-t4-Qll"/>
+                        <segue destination="5tc-KW-gHa" kind="show" identifier="moveToComplete" id="0I0-t4-Qll"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEB-Ud-llu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="721.73913043478262" y="-50.223214285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Complete To Do View Controller-->
         <scene sceneID="VaX-JH-fbg">
             <objects>
-                <viewController id="5tc-KW-gHa" sceneMemberID="viewController">
+                <viewController id="5tc-KW-gHa" customClass="CompleteToDoViewController" customModule="coreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sde-6J-NiL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,12 +68,18 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Mark this ToDo as complete!">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="completeTapped:" destination="5tc-KW-gHa" eventType="touchUpInside" id="HBZ-3O-uD1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f4B-KH-4R9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="3pH-uY-J3q"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="LNG-RS-sLj" id="21Z-G7-o31"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS1-CG-82P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
